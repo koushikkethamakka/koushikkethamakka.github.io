@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koushik Kethamakka</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #24292f;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+        a { color: #0969da; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        /* Header */
+        .header {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+            margin-bottom: 25px;
+        }
+        .header img.photo {
+            width: 128px;
+            height: 128px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .header h1 {
+            font-size: 26px;
+            margin: 0 0 5px 0;
+            font-weight: 600;
+            color: #24292f;
+        }
+        .header .tagline {
+            font-size: 14px;
+            color: #57606a;
+            margin: 0 0 12px 0;
+        }
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            align-items: center;
+        }
+        .social-icons a { display: inline-block; }
+        .social-icons img { width: 22px; height: 22px; }
+        
+        hr {
+            border: none;
+            border-top: 1px solid #d8dee4;
+            margin: 25px 0;
+        }
+        
+        /* Timeline */
+        .timeline {
+            position: relative;
+            margin-left: 100px;
+            padding-left: 30px;
+        }
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 8px;
+            top: 8px;
+            bottom: 8px;
+            width: 2px;
+            background: #d0d7de;
+        }
+        .timeline-entry {
+            position: relative;
+            margin-bottom: 25px;
+        }
+        .timeline-entry::before {
+            content: '';
+            position: absolute;
+            left: -26px;
+            top: 6px;
+            width: 10px;
+            height: 10px;
+            background: #d0d7de;
+            border-radius: 50%;
+        }
+        .timeline-entry .date {
+            position: absolute;
+            left: -130px;
+            width: 90px;
+            text-align: right;
+            font-size: 13px;
+            font-weight: 600;
+            color: #24292f;
+            top: 3px;
+        }
+        .timeline-entry .content {
+            font-size: 14px;
+            line-height: 1.7;
+        }
+        
+        /* Section labels */
+        .section-label {
+            font-size: 18px;
+            font-weight: 600;
+            color: #24292f;
+            margin: 35px 0 12px 0;
+        }
+        
+        /* Bio */
+        .bio {
+            font-size: 14px;
+            color: #57606a;
+            margin: 10px 0 25px 0;
+            line-height: 1.7;
+        }
+        
+        ul { margin: 10px 0; padding-left: 20px; }
+        li { margin-bottom: 8px; font-size: 14px; line-height: 1.6; }
+        
+        @media (max-width: 600px) {
+            .header { flex-direction: column; align-items: center; text-align: center; }
+            .timeline { margin-left: 80px; }
+            .timeline-entry .date { left: -100px; width: 70px; font-size: 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">
+    <img src="photo.jpg" alt="Koushik Kethamakka" class="photo">
+    <div>
+        <h1>Koushik Kethamakka</h1>
+        <p class="tagline">Building AI/ML infrastructure and distributed systems at scale 🚀</p>
+        <div class="social-icons">
+            <a href="https://x.com/kethamakka42970" title="X/Twitter">
+                <img src="https://abs.twimg.com/favicons/twitter.3.ico" alt="X">
+            </a>
+            <a href="https://linkedin.com/in/uma-shankar-koushik-kethamakka-8a527964" title="LinkedIn">
+                <img src="https://static.licdn.com/aero-v1/sc/h/akt4ae504epesldzj74dzred8" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/koushikkethamakka" title="GitHub">
+                <img src="https://github.githubassets.com/favicons/favicon.svg" alt="GitHub">
+            </a>
+        </div>
+    </div>
+</div>
+
+<hr>
+
+<div class="timeline">
+    <div class="timeline-entry">
+        <div class="date">2022 -</div>
+        <div class="content">Engineer at <a href="https://aws.amazon.com/bedrock/">AWS Bedrock</a>, leading multiple projects enabling tens of thousands of enterprise customers to use generative AI safely and at scale. Led Guardrails, AWS's responsible AI service for implementing safety controls on LLM applications. Built the APIs and hosted the service end-to-end. Built the ML infrastructure: model training pipelines, data labeling workflows, model hosting on custom inference chips, fine-tuning systems, and trust & safety classifiers for Anthropic and other foundation models. Built the distributed systems infrastructure for Guardrails: throttling and rate limiting, admission control for fair resource allocation, noisy neighbor isolation, scheduling systems for traffic management, and schema abstraction layers for rapid model onboarding enabling day-0 support for new models. Also led Amazon's internal LLM evaluation platform, the company-wide infrastructure used by all teams at Amazon building and evaluating LLMs, with multi-tenant data isolation supporting accuracy benchmarking, safety assessment, and coding evaluations across dozens of models. Later designed and led AWS Bedrock Evaluations, the public product, using the same building blocks to bring evaluation capabilities to external customers.</div>
+    </div>
+    
+    <div class="timeline-entry">
+        <div class="date">2021 - 2023</div>
+        <div class="content">Technical lead for <a href="https://aws.amazon.com/lex/">AWS Lex</a> speech recognition. Built the hybrid HMM/DNN architecture using an internal version of Kaldi. Developed personalized grammars and custom language models to improve transcription accuracy for customer-specific vocabularies and domains. Architected cellular infrastructure with hot-loading model capabilities enabling zero-downtime deployments across production fleet. Built real-time bi-directional streaming with Voice Activity Detection for natural turn-taking. Created scalable framework for multi-language expansion supporting Chinese, Japanese, Korean, Portuguese, and European languages.</div>
+    </div>
+    
+    <div class="timeline-entry">
+        <div class="date">2018 - 2021</div>
+        <div class="content">Built Amazon's real-time <b>payment fraud detection</b> platform. Architected industry-first inline fraud evaluation during checkout, building risk signals throughout the user journey and using them before payment. The system runs at ordering scale with fraud checks happening through the checkout process in small batches. Designed data caching architecture for single-click checkout scenarios, running inline lightweight checks within 100ms latency constraints. The architecture was key to meeting checkout page performance bar. This same system was also used to make Amazon PSD2 compliant, handling the multi-factor authentication requirements. Significantly reduced chargebacks while maintaining seamless customer experience.</div>
+    </div>
+    
+    <div class="timeline-entry">
+        <div class="date">2016 - 2018</div>
+        <div class="content">Software engineer at <a href="https://amazon.com">Amazon</a>. Built fraud evaluation pipelines, feature stores, and ML infrastructure running during fulfillment (after order placement). This was the pre-checkout fraud era: handled chargebacks, supported manual investigators, processed disputes. The later evolution to checkout-time fraud detection simplified operations significantly and reduced chargebacks. Also built KYC workflow orchestration for European sellers handling 100K concurrent workflows with complex state machine logic and regulatory compliance.</div>
+    </div>
+    
+    <div class="timeline-entry">
+        <div class="date">2013 - 2016</div>
+        <div class="content">Software engineer at <a href="https://insperity.com">Insperity</a>. Built enterprise HR software solutions serving thousands of businesses with payroll, benefits, and workforce management capabilities.</div>
+    </div>
+    
+    <div class="timeline-entry">
+        <div class="date">2011 - 2013</div>
+        <div class="content">M.S. Computer Science at <a href="https://uh.edu">University of Houston</a>.</div>
+    </div>
+    
+    <div class="timeline-entry">
+        <div class="date">2007 - 2011</div>
+        <div class="content">B.Tech Computer Science at <a href="https://jntuh.ac.in">JNTUH College of Engineering Hyderabad</a>.</div>
+    </div>
+</div>
+
+<div class="section-label">Bio</div>
+<div class="bio">Koushik Kethamakka is an engineer at Amazon Web Services building AI/ML infrastructure and distributed systems. He currently works on AWS Bedrock, focused on systems that serve millions of customers at scale. His work spans model evaluation platforms, real-time ML systems, speech recognition, and high-throughput distributed architectures. Active in the AI engineering space, working with modern coding tools including Claude Code, Cursor, and AI-assisted development workflows. Based in Seattle, WA.</div>
+
+<div class="section-label">Writing</div>
+<p>AWS Blog Posts:</p>
+<ul>
+    <li><a href="https://aws.amazon.com/blogs/machine-learning/amazon-bedrock-guardrails-expands-support-for-code-domain/">Amazon Bedrock Guardrails expands support for code domain</a> (November 2025)</li>
+    <li><a href="https://aws.amazon.com/blogs/machine-learning/tailor-responsible-ai-with-new-safeguard-tiers-in-amazon-bedrock-guardrails/">Tailor responsible AI with new safeguard tiers in Amazon Bedrock Guardrails</a> (June 2025)</li>
+</ul>
+
+<div class="section-label">Misc</div>
+<ul>
+    <li>I'm on <a href="https://x.com/kethamakka42970">X/Twitter</a> and <a href="https://linkedin.com/in/uma-shankar-koushik-kethamakka-8a527964">LinkedIn</a>.</li>
+    <li>I hold a patent (P87041-US01) on customizable interaction filtering systems for AI safety.</li>
+    <li>I've spoken at Principals of Amazon (1,300+ engineers, 4.49/5.0 rating).</li>
+    <li>Featured in AWS re:Invent sessions and official AWS blogs.</li>
+</ul>
+
+</body>
+</html>
